@@ -1,6 +1,6 @@
 # LanguageTags
 
-https://github.com/piterwilson/LanguageTags/workflows/Swift/badge.svg
+![Test](https://github.com/piterwilson/LanguageTags/workflows/Test/badge.svg)
 
 `LanguageTags` is an swift enum with cases for 153 RFC-5646 Language tags.
 

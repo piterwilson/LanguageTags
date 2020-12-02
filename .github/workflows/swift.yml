@@ -1,4 +1,4 @@
-name: Swift
+name: Test
 
 on:
   push:
@@ -16,4 +16,4 @@ jobs:
     - name: List Simulators
       run: xcrun instruments -s
     - name: Run tests
-      run: xcodebuild clean test -workspace 'MyWorkspace.xcworkspace' -scheme 'MyScheme' -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest'
+      run: xcodebuild test -scheme 'LanguageTags' -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest'
