@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build
-      run: swift build -v
+    - name: List Simulators
+      run: xcrun instruments -s
     - name: Run tests
-      run: swift test -v
+      run: xcodebuild clean test -workspace 'MyWorkspace.xcworkspace' -scheme 'MyScheme' -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest'
