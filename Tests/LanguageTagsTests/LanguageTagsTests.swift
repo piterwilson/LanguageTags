@@ -700,9 +700,15 @@ final class LanguageTagsTests: XCTestCase {
         XCTAssertEqual(LanguageTags.es_UY.description, "español (Uruguay)")
     }
     
+    #if(os(macOS))
+    func test_nn_NO_Description() {
+        XCTAssertEqual(LanguageTags.nn_NO.description, "nynorsk (Noreg)")
+    }
+    #else
     func test_nn_NO_Description() {
         XCTAssertEqual(LanguageTags.nn_NO.description, "norsk nynorsk (Noreg)")
     }
+    #endif
     
     func test_ky_KG_Description() {
         XCTAssertEqual(LanguageTags.ky_KG.description, "кыргызча (Кыргызстан)")

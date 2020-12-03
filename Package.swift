@@ -5,10 +5,6 @@ import PackageDescription
 
 let package = Package(
     name: "LanguageTags",
-    platforms: [
-        .iOS(.v9),
-        .tvOS(.v9)
-    ],
     products: [
         .library(
             name: "LanguageTags",

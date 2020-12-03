@@ -15,5 +15,9 @@ jobs:
     - uses: actions/checkout@v2
     - name: List Simulators
       run: xcrun instruments -s
-    - name: Run tests
+    - name: Run tests (macOS)
+      run: swift test
+    - name: Run tests (iOS)
       run: xcodebuild test -scheme 'LanguageTags' -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest'
+    - name: Run tests (tvOS)
+      run: xcodebuild test -scheme 'LanguageTags' -destination 'platform=tvOS Simulator,name=Apple TV,OS=latest'
